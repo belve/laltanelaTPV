@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise - MySQL GUI v6.07
-Host - 5.5.32-0ubuntu0.12.04.1 : Database - RisaseTPV
+Host - 5.5.32-0ubuntu0.12.04.1 : Database - laltanelaTPV
 *********************************************************************
 Server version : 5.5.32-0ubuntu0.12.04.1
 */
@@ -9,9 +9,9 @@ Server version : 5.5.32-0ubuntu0.12.04.1
 
 /*!40101 SET SQL_MODE=''*/;
 
-create database if not exists `RisaseTPV`;
+create database if not exists `laltanelaTPV`;
 
-USE `RisaseTPV`;
+USE `laltanelaTPV`;
 
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;

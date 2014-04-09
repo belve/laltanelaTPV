@@ -8,13 +8,15 @@ $equiEST['F']="FINALIZADO";
 $equiEST['A']="EN ALMACÉN";
 $equiEST['T']="ENVIADO A TIENDAS";
 
-$pathimages="c:/D/fotos/";
-$urlimages="http://192.168.1.11/photos/";
+
+$pathimages="c:/D/fotos_altanela/";
+$urlimages="/photos/";
+
 
 global $dbnivel; global $tiendas; global $dbnivelCR; global $dbnivelAPP;
 
 
-$dbnivel=new DB('localhost','tpv','tpv','RisaseTPV');
+$dbnivel=new DB('localhost','tpv','tpv','laltanelaTPV');
 
 
 if (!$dbnivel->open()){die($dbnivel->error());};
