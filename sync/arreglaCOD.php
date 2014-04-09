@@ -16,8 +16,8 @@ $doit=1;
 
 $noestan=array();
 
-$dbnivel=new DB('192.168.1.113','tpv','tpv','RisaseTPV');
-$dbnivelAPP=new DB('192.168.1.11','tpv','pepito','risase');
+$dbnivel=new DB('192.168.1.113','tpv','tpv','laltanelaTPV');
+$dbnivelAPP=new DB('192.168.1.11','tpv','pepito','laltanela');
 
 if (!$dbnivelAPP->open()){die($dbnivelAPP->error());};
 if (!$dbnivelAPP->close()){die($dbnivelAPP->error());};

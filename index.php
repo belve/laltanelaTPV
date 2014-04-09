@@ -6,7 +6,7 @@
 
 
 
-<title>Aplicación TPV RISASE</title>
+<title>Aplicación TPV L'Altanela</title>
 
 
 <script type="text/javascript" src="/jquery/jquery-1.9.0.min.js"></script>
