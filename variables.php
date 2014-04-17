@@ -16,7 +16,7 @@ $urlimages="/photos/";
 global $dbnivel; global $tiendas; global $dbnivelCR; global $dbnivelAPP;
 
 
-$dbnivel=new DB('localhost','tpv','tpv','laltanelaTPV');
+$dbnivel=new DB('localhost','tpv','tpv','laltalenaTPV');
 
 
 if (!$dbnivel->open()){die($dbnivel->error());};

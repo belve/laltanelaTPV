@@ -9,7 +9,7 @@ if (!$link) {
   die('Not connected : ' . mysql_error());
 }
 
-$db_selected = mysql_select_db('laltanelaTPV', $link);
+$db_selected = mysql_select_db('laltalenaTPV', $link);
 if (!$db_selected) {
   die ('Cannot use foo : ' . mysql_error());
 }else{

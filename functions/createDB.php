@@ -21,9 +21,9 @@
 <?php
 require_once("../db.php");
 
-$dbnivelAPP=new DB('192.168.1.11','tpv','tpv','laltanela');
-$dbnivelBAK=new DB('192.168.1.11','tpv','tpv','laltanela_backup');
-$dbnivel=new DB('localhost','tpv','tpv','laltanelaTPV');
+$dbnivelAPP=new DB('192.168.1.11','tpv','tpv','laltalena');
+$dbnivelBAK=new DB('192.168.1.11','tpv','tpv','laltalena_backup');
+$dbnivel=new DB('localhost','tpv','tpv','laltalenaTPV');
 
 
 $lineas=file("../sql/createDB.sql");

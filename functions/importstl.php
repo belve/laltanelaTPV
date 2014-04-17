@@ -8,8 +8,8 @@ foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo .
 require_once("../db.php");
 require_once("../variables.php");
 
-$dbnivelAPP=new DB('192.168.1.11','tpv','tpv','laltanela');
-$dbnivelBAK=new DB('192.168.1.11','tpv','tpv','laltanela_backup');
+$dbnivelAPP=new DB('192.168.1.11','tpv','tpv','laltalena');
+$dbnivelBAK=new DB('192.168.1.11','tpv','tpv','laltalena_backup');
 
 
 if (!$dbnivel->open()){die($dbnivel->error());};
