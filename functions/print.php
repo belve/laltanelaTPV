@@ -36,7 +36,10 @@ $espacios[24]="                        ";
 $espacios[25]="                         ";
 
 $fecha=date('d') . "/" . date('m') . "/" . date('Y');
-$ticket ="RISASE,S.A. (A-78088176)  Fecha:$fecha\n";
+$ticket ="L'ALTALENA MODA, S.L          (B-86987815)\n";
+$ticket.="Fecha:$fecha\n";
+
+
 
 $s=$espacios[42-strlen($nt)-strlen($dr)]; $dr=$s . $dr;
 $ticket.= $nt . $dr ."\n\n";
@@ -136,7 +139,8 @@ $espacios[24]="                        ";
 $espacios[25]="                         ";
 
 $fecha=date('d') . "/" . date('m') . "/" . date('Y');
-$ticket ="RISASE,S.A. (A-78088176)  Fecha:$fecha\n";
+$ticket ="L'ALTALENA MODA, S.L          (B-86987815)\n";
+$ticket.="Fecha:$fecha\n";
 
 $s=$espacios[42-strlen($nt)-strlen($dr)]; $dr=$s . $dr;
 $ticket.= $nt . $dr ."\n\n";
@@ -208,12 +212,13 @@ $espacios[24]="                        ";
 $espacios[25]="                         ";
 
 $fecha=date('d') . "/" . date('m') . "/" . date('Y');
-$ticket ="RISASE,S.A. (A-78088176)  Fecha:$fecha\n";
+$ticket ="L'ALTALENA MODA, S.L          (B-86987815)\n";
+$ticket.="Fecha:$fecha\n";
 
 $s=$espacios[42-strlen($nt)-strlen($dr)]; $dr=$s . $dr;
 $ticket.= $nt . $dr ."\n\n";
 
-$ticket.=$idt ."\n";
+$ticket.=$idt ."\n\n";
  
 
 $ticket.="Articulo       Codigo  Cant  Precio  Total\n";
@@ -274,15 +279,18 @@ $ticket.="Total euros:        $total\n";
 
 
 
-$ticket.="GRACIAS POR SU COMPRA                     \n";
+$ticket.="IVA INCLUIDO                              \n";
+
 $ticket.="------------------------------------------\n";
 $ticket.="Los articulos se cambian en un plazo      \n";
-$ticket.="maximo de 15 dias por otro articulo       \n";
+$ticket.="maximo de 30 dias por otro articulo       \n";
 $ticket.="o por un vale sin caducidad.              \n";
 $ticket.="No se devuelve el dinero.                 \n";
 $ticket.="------------------------------------------\n";
-$ticket.="           www.debisuteria.com            \n";
+$ticket.="          www.laltalena.es                \n";
 $ticket.="visitenos en internet y obtenga descuentos\n";
+$ticket.="------------------------------------------\n";
+$ticket.="GRACIAS POR SU COMPRA                     \n";
 
 $ticket.="\n\n\n\n\n";
 
