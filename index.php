@@ -6,7 +6,7 @@
 
 
 
-<title>Aplicación TPV L'Altanela</title>
+<title>Aplicación TPV L'Altalena</title>
 
 
 <script type="text/javascript" src="/jquery/jquery-1.9.0.min.js"></script>
