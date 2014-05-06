@@ -262,7 +262,9 @@ document.getElementById("descount").select();
 }
 
 function aplydescuent(){
-document.getElementById("descount_H").value=document.getElementById("descount").value;	
+var descu=document.getElementById("descount").value;
+if(descu>15){descu=15;};	
+document.getElementById("descount_H").value=descu;	
 document.getElementById("descuento").style.visibility='hidden';	
 show_cobro_do();
 }
