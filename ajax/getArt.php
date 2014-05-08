@@ -79,7 +79,7 @@ if($row['pvp']>0) $valores[16]=$row['pvp'];
 
 if( @fsockopen ("192.168.1.11", 80) ){
 
-$file = fopen ("http://192.168.1.11/ajax/getimage.php?codbarras=$codbarras", "r");
+$file = fopen ("http://laltalena.com/ajax/getimage.php?codbarras=$codbarras", "r");
 
 
 while (!feof ($file)) { $fotos = fgets ($file, 1024);};

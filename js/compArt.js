@@ -14,7 +14,7 @@ alert("Código no encontrado");
 document.getElementById("impCodA").value="";
 document.getElementById("impCodA").select();		
 }else if(key=="foto"){
-document.getElementById('foto').src=val;
+document.getElementById('foto').src='http://laltalena.com/photos/' + val;
 }else if(key=="opciones"){
 document.getElementById('opciones').innerHTML=val;
 }else{
