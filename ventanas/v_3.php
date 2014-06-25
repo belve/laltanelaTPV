@@ -99,8 +99,8 @@
 	
 </div>
 
-<div style="background-color: #FFFFFF;    float: left;    height: 197px;    left: 537px;    padding: 5px;    position: absolute;    top: 1px;    width: 100px;">
-<div id="opciones" style="width:100%; text-align:center;" ></div>	
+<div style="background-color: #FFFFFF;    float: left;    height: 197px;    left: 537px;    padding: 5px;    position: absolute;    top: 1px;    width: 155px;">
+<div id="opciones" style="width:100%; text-align:center; font-size:10px;" ></div>	
 	
 </div>
 

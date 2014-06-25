@@ -60,6 +60,15 @@ while ($row = $dbnivel->fetchassoc()){
 };
 
 
+$queryp= "select * from colores;";
+$dbnivel->query($queryp);
+while ($row = $dbnivel->fetchassoc()){
+$acolor[$row['id']]=$row['nombre'];
+	
+};
+
+
+
 $queryp= "select pvp from stocklocal where cod=$codbarras;";
 $dbnivel->query($queryp);
 while ($row = $dbnivel->fetchassoc()){
@@ -97,7 +106,10 @@ $valores['foto']= $urlimages . "nodisp.jpg";
 
 
 if(count($acodes)>0){foreach($acodes as $fot => $noot){
-$valores['opciones'].=$fot . "<br>";
+	
+$codCol=substr($fot,2,2); 	
+	
+$valores['opciones'].=$fot . " - " . $acolor[$codCol] .  "<br>";
 }}
 
 

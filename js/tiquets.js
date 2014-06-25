@@ -339,7 +339,7 @@ var it=document.getElementById('searchT2').value; it=it.toUpperCase();
 var indt=document.getElementById('idnt').value;
 var imn=it.replace(indt,"");
 
-if(it.length>=3){
+if(it.length>=15){
 	
 var url="/ajax/chkTICK2.php?idt=" + it;
 $.getJSON(url, function(data) {
