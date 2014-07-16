@@ -1,4 +1,6 @@
 <?php
+
+$debug=1;
 if($debug){echo "cuadra ________________________- \n\n";}
 if (!$dbnivelAPP->open()){die($dbnivelAPP->error());}; 
 $horr=date('G');
@@ -49,7 +51,7 @@ if($doitC){
 $stll="";
 
 if (!$dbnivel->open()){die($dbnivel->error());};
-$queryp= "select * from stocklocal_$id_tienda;";
+$queryp= "select * from stocklocal;";
 $dbnivel->query($queryp);if($debug){echo "$queryp <br>\n\n";};
 while ($row = $dbnivel->fetchassoc()){
 		
