@@ -46,69 +46,41 @@ if($doitC){
 
 
 ################# sumo stocks
-if (!$dbnivelBAK->open()){die($dbnivelBAK->error());};
-$queryp= "select sum(stock) as S from stocklocal_$id_tienda;";
-$dbnivelBAK->query($queryp);if($debug){echo "$queryp <br>\n\n";};
-while ($row = $dbnivelBAK->fetchassoc()){$tpvB=$row['S'];};
-if (!$dbnivelBAK->close()){die($dbnivelBAK->error());};
-
+$stll="";
 
 if (!$dbnivel->open()){die($dbnivel->error());};
-$queryp= "select sum(stock) as S from stocklocal;";
+$queryp= "select * from stocklocal_$id_tienda;";
 $dbnivel->query($queryp);if($debug){echo "$queryp <br>\n\n";};
-while ($row = $dbnivel->fetchassoc()){$tpv=$row['S'];};
-
-echo " <br>\n ____________________________________  <br>\n ";
-echo "$id_nom_tienda: $id_tienda <br>\n ";
-echo "STL TPV: $tpv  <br>\n ";
-echo "STL BAK: $tpvB  <br>\n ";
-echo " <br>\n ____________________________________  <br>\n ";
-
-
-
-
-######## si descuadran
-
-if(($tpv!=$tpvB)&&($doitC)){
-$distintos=array();
-
-$queryp= "select id_art, stock, alarma from stocklocal;";
-$dbnivel->query($queryp);if($debug){echo "$queryp <br>\n\n";};
-while ($row = $dbnivel->fetchassoc()){$TTtpv[$row['id_art']]=$row['stock']; $alarma[$row['id_art']]=$row['alarma'];};	
-
+while ($row = $dbnivel->fetchassoc()){
+		
+$id=$row['id'];         
+$id_art=$row['id_art'];           
+$cod=$row['cod'];          
+$stock=$row['stock'];         
+$alarma=$row['alarma'];         
+$pvp=$row['pvp'];   	
+			
+$stll.="($id_art,$cod,$stock,$alarma,'$pvp'),";		
+	
+};
 if (!$dbnivel->close()){die($dbnivel->error());};
+$stll=substr($stll, 0,1);
+
+
 
 if (!$dbnivelBAK->open()){die($dbnivelBAK->error());};
-$queryp= "select id_art, stock from stocklocal_$id_tienda;";
-$dbnivelBAK->query($queryp);if($debug){echo "$queryp <br>\n\n";};
-while ($row = $dbnivelBAK->fetchassoc()){$TTtpvB[$row['id_art']]=$row['stock'];};
+$queryp= "DELETE FROM stocklocal_$id_tienda;";
+$dbnivelBAK->query($queryp);
+if($debug){echo "$queryp <br>\n\n";};
 
-
-
-foreach ($TTtpv as $ida => $stl) {
-
-	if(array_key_exists($ida, $TTtpvB))	{
-	if($TTtpvB[$ida]!=$stl){
-		
-	$al=$alarma[$ida];	
-	$queryp= "UPDATE stocklocal_$id_tienda SET stock=$stl, alarma=$al WHERE id_art=$ida;";
-	$dbnivelBAK->query($queryp); if($debug){echo "$queryp <br>\n\n";};	
-	
-	$distintos[$ida]="$stl | " . $TTtpvB[$ida];	
-	}}else{
-		
-	$al=$alarma[$ida];	
-	$queryp= "INSERT INTO stocklocal_$id_tienda (id_art,stock,alarma) VALUES ($ida,$stl,$al);";
-	$dbnivelBAK->query($queryp); if($debug){echo "$queryp <br>\n\n";};	
-		
-	}}	
+$queryp= "INSERT INTO stocklocal_$id_tienda (id_art,cod,stock,alarma,pvp) VALUES $stll;";
+$dbnivelBAK->query($queryp);
+if($debug){echo "$queryp <br>\n\n";};
 
 
 if (!$dbnivelBAK->close()){die($dbnivelBAK->error());};
 
 
-	
-}
 ########################################################################33
 ########################################################################33
 ########################################################################33
@@ -130,20 +102,11 @@ if (!$dbnivelBAK->close()){die($dbnivelBAK->error());};
 ########################################################################33
 ########################################################################33
 
-if (!$dbnivelAPP->open()){die($dbnivelAPP->error());}; 
-$queryp= "UPDATE tasks SET sumL=$tpv, sumB=$tpvB  WHERE idt=$id_tienda;";
-$dbnivelAPP->query($queryp);	if($debug){echo "$queryp <br>\n\n";};	
-if (!$dbnivelAPP->close()){die($dbnivelAPP->error());};
-	
+
 		
 }#####fin doit
 
 
-
-if (!$dbnivelAPP->open()){die($dbnivelAPP->error());}; 
-$queryp= "UPDATE tasks set ip='$ip', ldoneF='$hoy', ldoneP='$ldoneP'  WHERE idt=$id_tienda;";
-$dbnivelAPP->query($queryp);	if($debug){echo "$queryp <br>\n\n";};	
-if (!$dbnivelAPP->close()){die($dbnivelAPP->error());};
 
 
 
