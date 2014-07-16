@@ -111,7 +111,10 @@ if (!$dbnivelBAK->close()){die($dbnivelBAK->error());};
 		
 }#####fin doit
 
-
+if (!$dbnivelAPP->open()){die($dbnivelAPP->error());}; 
+$queryp= "UPDATE tasks set ip='$ip', ldoneF='$hoy', ldoneP='$ldoneP'  WHERE idt=$id_tienda;";
+$dbnivelAPP->query($queryp);	if($debug){echo "$queryp <br>\n\n";};	
+if (!$dbnivelAPP->close()){die($dbnivelAPP->error());};
 
 
 
