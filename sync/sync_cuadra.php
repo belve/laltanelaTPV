@@ -1,6 +1,6 @@
 <?php
 
-$debug=1;
+
 if($debug){echo "cuadra ________________________- \n\n";}
 if (!$dbnivelAPP->open()){die($dbnivelAPP->error());}; 
 $horr=date('G');
@@ -52,7 +52,8 @@ $stll="";
 
 if (!$dbnivel->open()){die($dbnivel->error());};
 $queryp= "select * from stocklocal;";
-$dbnivel->query($queryp);if($debug){echo "$queryp <br>\n\n";};
+$dbnivel->query($queryp);if($debug){echo "$queryp <br>\n\n" . $dbnivel->error();};
+
 while ($row = $dbnivel->fetchassoc()){
 		
 $id=$row['id'];         
@@ -66,7 +67,9 @@ $stll.="($id_art,$cod,$stock,$alarma,'$pvp'),";
 	
 };
 if (!$dbnivel->close()){die($dbnivel->error());};
-$stll=substr($stll, 0,1);
+
+
+$stll=substr($stll, 0,-1);
 
 
 
