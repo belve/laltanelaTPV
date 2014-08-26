@@ -68,7 +68,7 @@ var emp=getCookieT('empK_' + current);
 code='&detTick[1][99999999][q]=1&detTick[1][99999999][p]=' + a
 ; 
 
-var url='/ajax/cobro.php?emp=' + emp + '&desc=&total=' + i + code;
+var url='/ajax/cobro.php?emp=' + emp + '&desc=&total=' + a + code + '&noprint=1';
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
 

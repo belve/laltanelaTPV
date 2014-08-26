@@ -1,4 +1,5 @@
 <?php
+$noprint=0;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 require_once("../db.php");
 require_once("../variables.php");
@@ -87,7 +88,9 @@ $queryp= "select ciudad, direccion from tiendas where id=$id_tienda;";
 $dbnivel->query($queryp);
 while ($row = $dbnivel->fetchassoc()){$nt=$row['ciudad']; $dr=$row['direccion'];};
 
+if(!$noprint){
 ticket($tifprint,$nt,$dr,$id_tienda,$idt);
+}
 
 if (!$dbnivel->close()){die($dbnivel->error());};
 
