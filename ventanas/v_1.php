@@ -293,9 +293,21 @@ F12 Descuento <br>
 	
 <div class="emple">Importe: </div><input type="text" class="impCod2" style="margin-left: 31px; border:0px; background-color: #cccccc; color:green;" id="do_tot">
 <div style="clear:both;"></div>
+
+<div id="devolNO" style="display:block">
 <div class="emple">Efectivo:</div><input type="text" class="impCod2" id="do_pag" style="background-color: white; color:#333333;"; onkeyup="javascript:cambi();">	
 <div style="clear:both;"></div>
 <div class="emple">Cambio:</div><input type="text" class="impCod2" id="do_cam" style="margin-left: 31px; border:0px; background-color: #cccccc; color:red;">	
+</div>
+
+<div id="devolSI" style="display:none">
+
+<div class="boton ns" onclick="tdesC();">Vale</div>
+<div class="boton ns" onclick="introD();">Efectivo</div>
+
+</div>	
+
+
 
 <input type="hidden" id="do_tot_H" value="">
 <input type="hidden" id="do_Dtot_H" value="">

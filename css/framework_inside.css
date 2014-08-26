@@ -7,7 +7,15 @@ body {
 }
 
                   
+.ns {
 
+ -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;	
+	
+}
 
 .subcar { border: 2px solid #0000FF;
     color: #0000FF;

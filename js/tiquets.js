@@ -49,6 +49,24 @@ show_emp(1);
 }
 
 
+function tdesC(){
+var i=document.getElementById("do_tot_H").value;
+document.getElementById("devolSI").style.display='none';
+
+if(i){
+var i=i* -1;	
+var url='/ajax/vale.php?i=' + i; 
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+	
+});
+});
+}
+console.log('imprime vale:' + i);
+introD();	
+}
+
+
 function introD(){
 
 if(document.activeElement.id=='impCod'){window.top.combo=1;}
@@ -271,11 +289,23 @@ show_cobro_do();
 
 
 function show_cobro_do(){
-document.getElementById("cobrador").style.visibility='visible';
-document.getElementById("do_pag").select();
 
 var importe=(document.getElementById('do_tot_H').value)*1;
 var Dimporte=(document.getElementById('do_Dtot_H').value)*1;
+
+
+if(importe < 0) { console.log('imp: ' + importe);
+document.getElementById("devolNO").style.display='none';
+document.getElementById("devolSI").style.display='inherit';	
+}else{
+document.getElementById("devolSI").style.display='none';
+document.getElementById("devolNO").style.display='inherit';	
+}
+
+
+document.getElementById("cobrador").style.visibility='visible';
+document.getElementById("do_pag").select();
+
 
 if(document.getElementById("descount_H").value > 0){
 	
