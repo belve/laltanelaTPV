@@ -87,8 +87,10 @@ $ticket.="Plazo maximo para el cambio 15 dias.      \n";
 $ticket.="Presentando este ticket. No se admiten    \n";
 $ticket.="devoluciones salvo tara o defecto.        \n";
 $ticket.="------------------------------------------\n";
-$ticket.="           www.debisuteria.com            \n";
-$ticket.="visitenos en internet y obtenga descuentos\n";
+$ticket.="          www.laltalena.es                \n";
+$ticket.="        visitenos en internet             \n";
+$ticket.="------------------------------------------\n";
+$ticket.="GRACIAS POR SU COMPRA                     \n";
 
 
 $ticket.="\n\n\n\n\n";
@@ -160,9 +162,10 @@ $ticket.="                                          \n";
 $ticket.="                                          \n";
 $ticket.="                                          \n";
 $ticket.="------------------------------------------\n";
-$ticket.="           www.debisuteria.com            \n";
-$ticket.="Visitenos en internet y obtenga descuentos\n";
-
+$ticket.="          www.laltalena.es                \n";
+$ticket.="        visitenos en internet             \n";
+$ticket.="------------------------------------------\n";
+$ticket.="GRACIAS POR SU COMPRA                     \n";
 
 $ticket.="\n\n\n\n\n";
 
@@ -288,7 +291,7 @@ $ticket.="o por un vale sin caducidad.              \n";
 $ticket.="No se devuelve el dinero.                 \n";
 $ticket.="------------------------------------------\n";
 $ticket.="          www.laltalena.es                \n";
-$ticket.="visitenos en internet y obtenga descuentos\n";
+$ticket.="        visitenos en internet             \n";
 $ticket.="------------------------------------------\n";
 $ticket.="GRACIAS POR SU COMPRA                     \n";
 
