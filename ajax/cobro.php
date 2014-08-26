@@ -11,7 +11,7 @@ $queryp= "select var, value from config";
 $dbnivel->query($queryp);
 while ($row = $dbnivel->fetchassoc()){$config = "\$" . $row['var'] . "='" . $row['value'] . "';";   eval($config);};
 
-
+if(array_key_exists('noprint', $_GET)){$noprint=1;}
 $detalle=$_GET['detTick'];
 $idemp=$_GET['emp'];
 $total=$_GET['total'];
