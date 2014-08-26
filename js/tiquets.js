@@ -54,14 +54,30 @@ var i=document.getElementById("do_tot_H").value;
 document.getElementById("devolSI").style.display='none';
 
 if(i){
-var i=i* -1;	
-var url='/ajax/vale.php?i=' + i; 
+var a=i* -1;	
+var url='/ajax/vale.php?i=' + a; 
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
 	
 });
 });
 }
+
+var current=getCookieT('current_emp');
+var emp=getCookieT('empK_' + current);
+code='&detTick[1][99999999][q]=1&detTick[1][99999999][p]=' + i; 
+
+var url='/ajax/cobro.php?emp=' + emp + '&desc=&total=' + i + code;
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+if(key=='t'){document.getElementById("tregalo").value=val;}			
+	
+});
+});
+
+
+
 console.log('imprime vale:' + i);
 introD();	
 }
@@ -532,6 +548,7 @@ var cambio=(total*1)-(pagado*1);var check=cambio;
 console.log('check:' + check);
 if(check <= 0){
 cambio = cambio.toFixed(2) + ' €';
+document.getElementById("devolSI").style.display='none';
 document.getElementById("do_cam").value=cambio;
 document.getElementById("cajon").style.visibility='visible';	
 cobro_do();
