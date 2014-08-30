@@ -115,7 +115,7 @@ cod=cod.trim();
 var mod=document.getElementById("dev_h").value;
 
 var check=0;
-if ((cod==10009999)||(cod==20009999)||(cod==30009999)||(cod==40009999)||(cod==50009999)||(cod==60009999)||(cod==70009999)||(cod==80009999)||(cod==90009999)){var check=1;
+if ((cod==99999999)||(cod==10009999)||(cod==20009999)||(cod==30009999)||(cod==40009999)||(cod==50009999)||(cod==60009999)||(cod==70009999)||(cod==80009999)||(cod==90009999)){var check=1;
 if(document.getElementById("manual").style.visibility=='hidden'){
 document.getElementById("manual").style.visibility='visible';
 document.getElementById("manual_i").value='';
@@ -130,6 +130,7 @@ document.getElementById("manual_i").select();
 
 if(document.getElementById("manual").style.visibility=='hidden'){
 var manual=document.getElementById("manual_i").value;
+
 document.getElementById("manual_i").value='';
 	
 if(tiq.length>0){var det=tiq.split('<>');}
@@ -152,8 +153,12 @@ total=(total*1)+(datos[3]*QTY);
 
 
 if(repe==0){
+
+if (cod==99999999){mod=1;}	
+	
 var url='/ajax/addArticulo.php?cod=' + cod + '&mod=' + mod + '&manual=' + manual;
 
+console.log('codigo=' + cod);
 
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
