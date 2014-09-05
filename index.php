@@ -124,7 +124,7 @@
     	<ul class="submenu">
         	
         	<li onclick="javascript:owin('v_3','Comprobar Artículo','');"><a>Comprobar Artículo</a></li>
-        	<li onclick="javascript:owin('v_4','Vales','');"><a>Vales</a></li>
+        	<!-- <li onclick="javascript:owin('v_4','Vales','');"><a>Vales</a></li> -->
         </ul>
     	
     </li>
