@@ -10,7 +10,7 @@ $equiEST['T']="ENVIADO A TIENDAS";
 
 
 $pathimages="c:/D/fotos_altanela/";
-$urlimages="/photos/";
+$urlimages="http://laltalena.com/photos/";
 
 
 global $dbnivel; global $tiendas; global $dbnivelCR; global $dbnivelAPP;
