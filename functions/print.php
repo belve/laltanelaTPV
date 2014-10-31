@@ -83,7 +83,7 @@ $s=$espacios[7-strlen($total)]; $total=$s . $total;
 
 
 $ticket.="------------------------------------------\n";
-$ticket.="Plazo maximo para el cambio 15 dias.      \n";
+$ticket.="Plazo maximo para el cambio 30 dias.      \n";
 $ticket.="Presentando este ticket. No se admiten    \n";
 $ticket.="devoluciones salvo tara o defecto.        \n";
 $ticket.="------------------------------------------\n";
