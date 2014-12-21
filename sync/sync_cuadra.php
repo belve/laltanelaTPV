@@ -6,7 +6,7 @@ if (!$dbnivelAPP->open()){die($dbnivelAPP->error());};
 $horr=date('G');
 
 
-$file = fopen ("http://cursodecursos.com:8080/test.php", "r");
+$file = fopen ("https://seekformacion.com/test.php", "r");
 while (!feof ($file)) { $ip = fgets ($file, 1024);};
 fclose($file);
 
