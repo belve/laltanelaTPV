@@ -107,7 +107,7 @@ $valores['foto']= $urlimages . "nodisp.jpg";
 
 if(count($acodes)>0){foreach($acodes as $fot => $noot){
 	
-$codCol=substr($fot,2,2); 	
+$codCol=substr($fot,2,2) * 1;
 	
 $valores['opciones'].=$fot . " - " . $acolor[$codCol] .  "<br>";
 }}
