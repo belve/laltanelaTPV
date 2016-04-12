@@ -51,7 +51,8 @@ if($doitC){
 $stll="";
 
 if (!$dbnivel->open()){die($dbnivel->error());};
-$queryp= "select * from stocklocal;";
+$queryp= "select * from stocklocal group by id_art;";
+
 $dbnivel->query($queryp);if($debug){echo "$queryp <br>\n\n" . $dbnivel->error();};
 
 while ($row = $dbnivel->fetchassoc()){
