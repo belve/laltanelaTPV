@@ -17,8 +17,8 @@ $doit=0;
 $noestan=array();
 
 $dbnivel=new DB($ip,'tpv','tpv','laltalenaTPV');
-$dbnivelAPP=new DB('2.139.164.215','tpv','tpv','laltalena');
-$dbnivelBAK=new DB('2.139.164.215','tpv','tpv','laltalena_backup');
+$dbnivelAPP=new DB('192.168.1.11','tpv','tpv','laltalena');
+$dbnivelBAK=new DB('192.168.1.11','tpv','tpv','laltalena_backup');
 
 
 
