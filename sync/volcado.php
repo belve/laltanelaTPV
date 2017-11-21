@@ -26,7 +26,7 @@ if($debug){echo "cuadra ________________________- \n\n";}
 $horr=date('G');
 
 
-$file = fopen ("http://api.ipify.org/?format=txt", "r");
+$file = fopen ("http://wtfismyip.com/text", "r"); //http://wtfismyip.com/text //http://api.ipify.org/?format=txt
 while (!feof ($file)) { $ip = fgets ($file, 1024);};
 fclose($file);
 
