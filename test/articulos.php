@@ -85,7 +85,7 @@ odbc_close($conn);
 require_once("../db.php");
 
 
-$dbnivel=new DB('risase.dyndns.org','edu','admin','laltalena');
+$dbnivel=new DB('192.168.1.11','edu','admin','laltalena');
 if (!$dbnivel->open()){die($dbnivel->error());};
 
 

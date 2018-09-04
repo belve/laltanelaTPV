@@ -8,7 +8,7 @@ require_once("../variables.php");
 $debug=1;
 
 
-$dbnivelAPP=new DB('risase.dyndns.org','tpv','tpv','laltalena');
+$dbnivelAPP=new DB('192.168.1.11','tpv','tpv','laltalena');
 
 if (!$dbnivelAPP->open()){die($dbnivelAPP->error());};
 $queryp= "select id from tiendas where activa=1;";

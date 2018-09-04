@@ -5,7 +5,7 @@ $date=date('Y') . date('m') . date('d');
 
 $file="";
 
-$file = fopen ("http://risase.dyndns.org/ajax/getdate.php", "r");
+$file = fopen ("http://192.168.1.11/ajax/getdate.php", "r");
 if($file){
 while (!feof ($file)) { $remotedate = fgets ($file, 1024);};
 fclose($file);

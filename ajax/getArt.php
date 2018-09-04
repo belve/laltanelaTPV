@@ -86,7 +86,7 @@ if($row['pvp']>0) $valores[16]=$row['pvp'];
 
 
 
-if( @fsockopen ("risase.dyndns.org", 80) ){
+if( @fsockopen ("192.168.1.11", 80) ){
 
 $file = fopen ("http://laltalena.com/ajax/getimage.php?codbarras=$codbarras", "r");
 
